@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+
+}
+
+.main{
+    width: 100%;
+    min-height: 100vh;
+
+}
+
+/* navbar */
+header {
+    background-color: rgba(25, 24, 24, 0.7); /* Initial background color with transparency */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 50;
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.nav-div {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+/* home */
+
+.home{
+    background-image: url('../images/coffee.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    /* background: fixed; */
+}
+
+.text {
+    display: flex; /* Enable flexbox layout */
+    /* justify-content: center; Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Example height for container */
+    padding: 20px;
+}
+
+.text h3 {
+    position: relative;
+    color: #ffffff;
+    text-align: center; /* Center the text horizontally */
+}
