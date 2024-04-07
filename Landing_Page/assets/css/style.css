@@ -1,14 +1,14 @@
-*{
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    box-sizing: border-box;
-}
+    background-color: #f9f9f9;
+  }
 
 html,body{
     width: 100%;
     height: 100%;
-
+    scroll-behavior: smooth;
 }
 
 .main{
@@ -51,39 +51,51 @@ header {
 
 /* home */
 
-.home{
-    background-image: url('../images/coffee.jpg'); 
+.home {
+    background-image: url('../images/coffee.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
-    /* background: fixed; */
+    position: relative; /* Add relative positioning */
 }
 
 .text {
-    display: flex; /* Enable flexbox layout */
-    /* justify-content: center; Center content horizontally */
-    align-items: center; /* Center content vertically */
-    height: 100vh; /* Example height for container */
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    text-align: center;
+    color: rgb(255, 255, 255);
     padding: 20px;
+}
+
+.button {
+    position: absolute;
+    top: 70%;
+    left: 20px;
+    transform: translateY(-50%);
+    background-color: #ffffff; 
+    padding: 10px 20px; 
+    /* border: none;  */
+    border-radius: 5px; 
+    font-size: 16px;
+    cursor: pointer; 
+    transition: background-color 0.3s, box-shadow 0.3s; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-color: transparent; 
+    border-color: #f9f3f3;
     color: #ffffff;
 }
 
-.text h3 {
-    position: relative;
-    text-align: center; /* Center the text horizontally */
-}
 
-.text h2{
-    position: relative;
-    margin-top: 15vh;
-    padding: 50px;
-  text-align: center;
-}
+
 
 
 /* about */
 
-/* about  */
 
 .about-section {
     max-width: 800px;
@@ -92,6 +104,13 @@ header {
     /* background-color: rgba(0, 0, 0, 0.7); */
     padding: 20px;
 }
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
 
 .about-content {
     display: flex;
@@ -137,7 +156,245 @@ header {
     line-height: 1.6;
 }
 
+/* menu */
 
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  
+  .menu-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .menu-item {
+    width: calc(50% - 10px); /* Two items in one row with margin */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+  }
+  
+  .menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .item-details {
+    flex: 1;
+  }
+  
+  .menu-item h2 {
+    margin: 0;
+    color: #333;
+    font-size: 24px;
+  }
+  
+  .menu-item p {
+    margin-top: 10px;
+    color: #666;
+    font-size: 16px;
+  }
+  
+  .price {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff7f50;
+  }
+  
+  .item-photo {
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+  }
+  
+  .espresso {
+    background-image: url('../images/espresso.jpg'); 
+  }
+  
+  .cappuccino {
+    background-image: url('../images/cappuccino.jpg'); 
+  }
+  
+  .americano {
+    background-image: url('../images/americano.jpg'); 
+  }
+  
+  .latte {
+    background-image: url('../images/latte.jpg'); 
+  }
+
+  .macchiato{
+    background-image: url('../images/Macchiato.jpg');
+  }
+
+  .mocha{
+    background-image: url('../images/Mocha.jpg');
+  }
+
+  .ristretto{
+    background-image: url('../images/Ristretto.jpg');
+  }
+
+  .affogato{
+    background-image: url('../images/Affogato.jpg');
+  }
+
+
+  /* review */
+
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.review-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.user-avatar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.user-avatar img:hover {
+    transform: scale(1.05);
+}
+
+.review-details {
+    flex: 1;
+}
+
+.review-details h2 {
+    margin: 0;
+    color: #333;
+    font-size: 20px;
+}
+
+.rating {
+    margin-top: 5px;
+    font-size: 18px;
+    color: #ffc107; /* Yellow color for rating */
+}
+
+.comment {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/* contact */
+
+.contact {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 18px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ce2e2e;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #e63d3d;
+}
 
 
 
@@ -147,6 +404,7 @@ header {
 footer {
     background-color: rgba(0, 0, 0, 0.7);
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     color: #ffffff;
+    font-family: Arial, sans-serif;
 }
